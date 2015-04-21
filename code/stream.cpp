@@ -5,11 +5,18 @@
 #include "stream.h"
 
   //constructor with default values
-  Stream::Stream(std::string input_file_name) {
+  Stream::Stream(std::string input_file_name, std::string output_file_name) {
     std::cout << "Stream constructor called \n";
-    input_file.open(input_file_name.c_str());
+    input_file.open(input_file_name.c_str(), std::ios::binary);
     bool success = input_file.is_open();
-    if (success) {std::cout << "file opened \n";}
+    if (success) {std::cout << "input file opened \n";}
+
+    std::ofstream output_file;
+    output_file.open(output_file_name.c_str());
+    success = output_file.is_open();
+    if (success) {std::cout << "output file opened \n";}
+
+    char packet[1024];
     /*
     input_file_name = "../io_data/input_files/compressedfile1.z";
     output_file_name = "../io_data/output_files/decompressedfile1.txt";
@@ -27,7 +34,7 @@
     return success;
   }
   */
-
+/*
   bool Stream::createOutputFile(std::string output_file_name) {
     std::ofstream output_file;
     output_file.open(output_file_name.c_str());
@@ -38,15 +45,22 @@
       }
     return success;
   }
-
-  bool Stream::dataStillToRead() {
-    return !input_file.eof();
-  }
+  */
 
   bool Stream::loadNextPacket() {
+    //char packet[64];
+    input_file.seekg (0, std::ios::beg);
+    input_file.read(packet,64);
+    std::cout << packet << "\n";
     //return success;
   }
 
   bool Stream::savePacket() {
+    //char packet[64];
+    output_file.write(packet,64);
     //return success;
+  }
+
+  bool Stream::dataStillToRead() {
+    return !input_file.eof();
   }

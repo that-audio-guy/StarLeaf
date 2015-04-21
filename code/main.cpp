@@ -31,22 +31,21 @@ int main() {
   /* TODO
   put these user inputs are arguments to the a.out file, typing these each time will get borring!
   */
-  //create stream
-  Stream LZWFileStream(str_input_file_name);
+  //create stream, opening input and output files
+  Stream LZWFileStream(str_input_file_name, str_output_file_name);
 
   //Stream.LZWFile LZWFileStream();
   //create decompressor
   //note odd naming simulates functional programming
   LZWDecompressor LZWDecompress;
-  //create output file
-  LZWFileStream.createOutputFile(str_output_file_name);
-  /*
+
   //stream file from input to output through decompressor
-  while(LZWFileStream.dataStillToRead()){
+  //while(LZWFileStream.dataStillToRead()){
     LZWFileStream.loadNextPacket();
-    LZWDecompress.streamPacket(LZWFileStream.packet);
+
+    //LZWDecompress.streamPacket(LZWFileStream.packet);
     LZWFileStream.savePacket();
-  }
-  */
+  //}
+  
   std::cout << "program ended \n Check file for human readability \n Use different decompression option at runtime if output is garbage \n";
 }
