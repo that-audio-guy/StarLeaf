@@ -1,14 +1,21 @@
-#include <iostream>
-#include <string>
-#include <sstream>
+#ifndef STREAM_H
+#define STREAM_H
 
 class Stream {
 
+private:
+  std::string input_file_name;
+  std::string output_file_name;
+  unsigned int packet[1024];
+
 public:
 
-  bool openStream(std::string);
-  bool createOutputFile(std::string);
+  //Stream(int a=0);
+  bool openStream(std::string input_file_name);
+  bool createOutputFile(std::string output_file_name);
   bool dataStillToRead();
   bool loadNextPacket();
   bool savePacket();
 };
+
+#endif

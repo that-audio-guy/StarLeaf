@@ -79,3 +79,5 @@ The maximisation of code reuse is always desirable so decompressor function is a
   - fixing ubuntu wifi driver (again) and copying work so far in atom and markdown from phone friendly google doc. Setting up files.
 - 9:00
   - creating GIT repo on github, creating folder tree, loading files into folders ready to stubbing.
+  9:10 - 12:00
+    getting basic text in out of command line working and remembering how to use header files :s stubbed out beginnings of stream.cpp

@@ -8,7 +8,6 @@
 
 #include <iostream>
 #include <string>
-#include <sstream>
 
 #include "stream.h"
 
@@ -24,15 +23,16 @@ int main() {
   put these user inputs are arguments to the a.out file, typing these each time will get borring!
   */
   //create stream
-  Stream LZWFileStream();
-  /*
-  Stream.LZWFile LZWFileStream();
+  Stream LZWFileStream;
+
+  //Stream.LZWFile LZWFileStream();
   //create decompressor
   //note odd naming simulates functional programming
-  Processor.LZWDecompressor LZWDecompress();
+  //Processor.LZWDecompressor LZWDecompress();
   //open stream
   LZWFileStream.openStream(str_input_file_name);
   //create output file
+  /*
   LZWFileStream.createOutputFile();
   //stream file from input to output through decompressor
   while(LZWFileStream.dataStillToRead()){
