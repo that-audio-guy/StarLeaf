@@ -9,38 +9,37 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-using namespace std;
+
+#include "stream.h"
 
 int main() {
   //string user_input_string;
-  string str_input_file_name;
-  cout << "program initiated \n";
-  cout << "input file name:";
-  getline (cin, str_input_file_name);
+  std::string str_input_file_name;
+  std::cout << "program initiated \n";
+  std::cout << "input file name:";
+  getline (std::cin, str_input_file_name);
   //stringstream(mystr) >> price;
-  cout << "input file set to " << str_input_file_name << endl;
+  std::cout << "input file set to - '" << str_input_file_name << "'" << std::endl;
   /* TODO
   put these user inputs are arguments to the a.out file, typing these each time will get borring!
   */
-  /*
-  bool b_streamming = false;
   //create stream
+  Stream LZWFileStream();
+  /*
   Stream.LZWFile LZWFileStream();
   //create decompressor
   //note odd naming simulates functional programming
   Processor.LZWDecompressor LZWDecompress();
   //open stream
-  LZWFileStream.openStream();
-  b_streamming = true;
+  LZWFileStream.openStream(str_input_file_name);
   //create output file
   LZWFileStream.createOutputFile();
   //stream file from input to output through decompressor
-  while(b_streamming){
+  while(LZWFileStream.dataStillToRead()){
     LZWFileStream.loadNextPacket();
     LZWDecompress.streamPacket(LZWFileStream.packet);
     LZWFileStream.savePacket();
-    b_streamming = LZWFileStream.fileNotFullyRead();
   }
   */
-  cout << "program ended \n Check file for human readability \n Use different decompression option at runtime if output is garbage";
+  std::cout << "program ended \n Check file for human readability \n Use different decompression option at runtime if output is garbage \n";
 }
