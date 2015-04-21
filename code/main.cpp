@@ -8,32 +8,39 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
 
 #include "stream.h"
+#include "processor.h"
 
 int main() {
   //string user_input_string;
   std::string str_input_file_name;
+  std::string str_output_file_name;
   std::cout << "program initiated \n";
-  std::cout << "input file name:";
-  getline (std::cin, str_input_file_name);
+  //std::cout << "input file name:";
+  //getline (std::cin, str_input_file_name);
   //stringstream(mystr) >> price;
+  str_input_file_name = "../io_data/input_files/compressedfile1.z";
   std::cout << "input file set to - '" << str_input_file_name << "'" << std::endl;
+  //std::cout << "output file name:";
+  //getline (std::cin, str_output_file_name);
+  str_output_file_name = "../io_data/output_files/decompressedfile1.txt";
+  //stringstream(mystr) >> price;
+  std::cout << "output file set to - '" << str_input_file_name << "'" << std::endl;
   /* TODO
   put these user inputs are arguments to the a.out file, typing these each time will get borring!
   */
   //create stream
-  Stream LZWFileStream;
+  Stream LZWFileStream(str_input_file_name);
 
   //Stream.LZWFile LZWFileStream();
   //create decompressor
   //note odd naming simulates functional programming
-  //Processor.LZWDecompressor LZWDecompress();
-  //open stream
-  LZWFileStream.openStream(str_input_file_name);
+  LZWDecompressor LZWDecompress;
   //create output file
+  LZWFileStream.createOutputFile(str_output_file_name);
   /*
-  LZWFileStream.createOutputFile();
   //stream file from input to output through decompressor
   while(LZWFileStream.dataStillToRead()){
     LZWFileStream.loadNextPacket();

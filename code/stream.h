@@ -4,13 +4,13 @@
 class Stream {
 
 private:
-  std::string input_file_name;
-  std::string output_file_name;
+  std::ifstream input_file;
+  std::ofstream *output_file;
   unsigned int packet[1024];
 
 public:
 
-  //Stream(int a=0);
+  Stream(std::string input_file_name);
   bool openStream(std::string input_file_name);
   bool createOutputFile(std::string output_file_name);
   bool dataStillToRead();
