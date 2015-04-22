@@ -5,13 +5,18 @@
 #include <unordered_map>
 
 int main(){
+  std::cout << "Stephen Baldwins LZW 12 fixed width file decompressor \n";
+  std::string str_input_file_number;
+  std::cout << "input file name ending number \n (same ending appended to output file but with .txt):";
+  getline (std::cin, str_input_file_number);
+
   std::ifstream input_file;
-  input_file.open("../io_data/input_files/compressedfile4.z", std::ios::binary);
+  input_file.open("../io_data/input_files/compressedfile" + str_input_file_number + ".z", std::ios::binary);
   bool success = input_file.is_open();
   if (success) {std::cout << "input file opened \n";}
 
   std::ofstream output_file;
-  output_file.open("../io_data/output_files/decompressedfile1.txt");
+  output_file.open("../io_data/output_files/decompressedfile" + str_input_file_number + ".txt");
   success = output_file.is_open();
   if (success) std::cout << "output file opened \n";
       //read whole file into 32 bit array to get around the 12 not going into 8 problem.
@@ -39,8 +44,10 @@ int main(){
         code = expanded_raw_data[n];
         output_file << "(" << code << "=" << strings[code] << ")";
         std::cout << strings[code];
-        if ( previous_string.size() )//if there was a previous string
+        if ( previous_string.size() ) {//if there was a previous string
           strings[next_code++] = previous_string + strings[code][0];
+          output_file << "['" << previous_string + strings[code][0] << "' -> " << next_code << "]";
+        }
         previous_string = strings[code];
       }
       /*

@@ -25,7 +25,7 @@ Good Luck!
   io_data (folder)
   - Example input (subfolder)
     - (provided by StarLeaf)
-  - Example output 9subfolder)
+  - Example output (subfolder)
     - (produced by this code on my unbuntu machine)
 
 # Repo dependencies
@@ -37,10 +37,10 @@ Install c++q11 compiler (sudo aptget install cpp11 on Ubuntu) if you don't have 
 1. Download or pull the repo to a clean local directory
 2. Open a terminal and navigate to that directory
 3. go one layer deeper with cd ./code
-3. Type g++ main main.cpp stream.cpp - to compile the code.
-4. Type ./main Note the decompresor options.
-5. use file browser or navigate to io_data/output_files
-6. check contence of output with text reader or editor of choice
+3. Type g++ simple_main.cpp -std=c++11 - to compile the code.
+4. Type ./a.out
+5. view human readable decompressed output in terminal window
+5. use file browser or navigate to io_data/output_files to view decompression trace to see the inner workings of the decompressor.
 
 ## Options
 There are three different types of compression style for the LZW compression scheme

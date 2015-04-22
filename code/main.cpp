@@ -20,7 +20,6 @@ int main() {
   std::cout << "program initiated \n";
   //std::cout << "input file name:";
   //getline (std::cin, str_input_file_name);
-  //stringstream(mystr) >> price;
   str_input_file_name = "../io_data/input_files/compressedfile1.z";
   std::cout << "input file set to - '" << str_input_file_name << "'" << std::endl;
   //std::cout << "output file name:";
