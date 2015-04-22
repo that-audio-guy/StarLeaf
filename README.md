@@ -77,19 +77,19 @@ I then ran out of justifiable time and did the modern done thing of using as cod
   - fixing ubuntu wifi driver (again) and copying work so far in atom and markdown from phone friendly google doc. Setting up files.
 - 9:00
   - creating GIT repo on github, creating folder tree, loading files into folders ready to stubbing.
-  9:10 - 12:00
-    getting basic text in out of command line working and remembering how to use header files :s stubbed out beginnings of stream.cpp
-  13:00 - 17:30
-    failed to get text output working
+- 9:10 - 12:00
+  - getting basic text in out of command line working and remembering how to use header files :s stubbed out beginnings of stream.cpp
+- 13:00 - 17:30
+  - failed to get text output working
 
 ## 22 / 04 / 2015
-  8:00-9:00
-    started looking into decompressor
-  10:00 - 12:00
-    output of sorts
-  13:00 - 16:00
-    searching for tiny errors that are causing decompression error
-  16:00 - 17:30
-    small errors in decompressed output remain but cannot spot why in my code from trace output, assume input file corruption.
-    cleaning code
-    updating README 
+- 8:00-9:00
+  - started looking into decompressor
+- 10:00 - 12:00
+  - output of sorts
+- 13:00 - 16:00
+  - searching for tiny errors that are causing decompression error
+- 16:00 - 17:30
+  - small errors in decompressed output remain but cannot spot why in my code from trace output, assume input file corruption.
+  - cleaning code
+  - updating README 
