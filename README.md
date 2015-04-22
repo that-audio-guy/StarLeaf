@@ -39,30 +39,28 @@ Install c++q11 compiler
 3. go one layer deeper with cd ./code
 3. Type g++ simple_main.cpp -std=c++11 - to compile the code.
 4. Type ./a.out
-5. view human readable decompressed output in terminal window
-5. use file browser or navigate to io_data/output_files to view decompression trace to see the inner workings of the decompressor.
-
-## Options
-There are three different types of compression style for the LZW compression scheme
-1
-2
-3
+5. view decompressor trace in terminal window if desired
+5. use file browser or navigate to io_data/output_files to view decompressed output.
 
 ## Input file
-Is the input file to be decompressed. Files that are placed in the input files subfolder of the io_data folder need only their name not location.
+Is the input file to be decompressed. Files must follow the naming convention compressedfileX.z where X is defined at compile time.
 
-##  Output file
-giving a name only will place the output file in the output files subfolder of the io_data folder at the top of the tree.
+##  Output files
+are placed in the output file folder with the name decompressedfileX.txt with the X being the same as the input file.
 
 # Language choice
 
-Given that functions are being performed on data, so the concepts of objects are unclear, functional programming tools such as f# seem appropriate. My skill with F# is extremely limited and python and C++ is star stars preferred languages C++ was chosen as it's what I have the most experience with.
+Given that functions are being performed on data, so the concepts of objects are unclear, functional programming tools such as f# seem appropriate. My skill with F# is extremely limited (I know of it to a shallow depth rather than have used it). Python and C++ is StarLeaf's preferred languages C++ was thus chosen as it's what I have the most experience with.
 
 # Class structure
+
+I initially looked into 'doing it properly' and having classes.
 
 Given that the file size of the data to decompress could exceed physical memory 'streaming' the data out of the file through the processes seemed sensible hence calling the data storage class 'stream'
 In a multi streaming system multiple streams of different types could exist 'stream instances' so again defining this as a class made sense.
 The maximisation of code reuse is always desirable so decompressor function is a member of the process class in effect crudely simulating a functional programming structure.
+
+I then ran out of justifiable time and did the modern done thing of using as code from the internet as the base and not first principles. this lead to simple_main.cpp which is the real code to run.
 
 # Time spent
 
@@ -81,3 +79,17 @@ The maximisation of code reuse is always desirable so decompressor function is a
   - creating GIT repo on github, creating folder tree, loading files into folders ready to stubbing.
   9:10 - 12:00
     getting basic text in out of command line working and remembering how to use header files :s stubbed out beginnings of stream.cpp
+  13:00 - 17:30
+    failed to get text output working
+
+## 22 / 04 / 2015
+  8:00-9:00
+    started looking into decompressor
+  10:00 - 12:00
+    output of sorts
+  13:00 - 16:00
+    searching for tiny errors that are causing decompression error
+  16:00 - 17:30
+    small errors in decompressed output remain but cannot spot why in my code from trace output, assume input file corruption.
+    cleaning code
+    updating README 
