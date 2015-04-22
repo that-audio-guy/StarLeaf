@@ -30,7 +30,7 @@ Good Luck!
 
 # Repo dependencies
 
-Install c++q11 compiler (sudo aptget install cpp11 on Ubuntu) if you don't have it already.
+Install c++q11 compiler
 
 # To use the code
 
