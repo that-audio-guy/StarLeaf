@@ -62,6 +62,16 @@ The maximisation of code reuse is always desirable so decompressor function is a
 
 I then ran out of justifiable time and did the modern done thing of using as code from the internet as the base and not first principles. this lead to simple_main.cpp which is the real code to run.
 
+# Result / remaining issues
+
+Output (at least) strongly approaches correct looking. My debugging leans towards input file corruption but I don't have total confidence in that, code is very memory intensive and as such has a fixed file size it can read, given more time this is what i would fix first
+
+- decompressor won't handle situation where the dictionary is completely filled.
+- very high memory use but proves concept
+
+in example input file 3 and 4 their appears to be an issue with the input file.
+the 'ic' in victory near the start of file 3 is stored as a single value 131, this is less than 256 so not a decompressor issue - file corrupt
+
 # Time spent
 
 ## 20 / 04 / 2015
@@ -92,4 +102,7 @@ I then ran out of justifiable time and did the modern done thing of using as cod
 - 16:00 - 17:30
   - small errors in decompressed output remain but cannot spot why in my code from trace output, assume input file corruption.
   - cleaning code
-  - updating README 
+  - updating README
+- 17:30 - 18:00
+  - Screenshot
+  - added 'results' to README.

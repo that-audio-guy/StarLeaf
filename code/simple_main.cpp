@@ -59,13 +59,7 @@ int main(){
     previous_string = strings[code];
   }
   if(str_show_decompressor_trace.compare("y")==0) std::cout << "\n";
-  /*
-  # notes
-  decompressor won't handel situation where the dictonary is completly filled
-  very high memory use but proves concept
-  in example input file 3 and 4 their appears to be an issue with the input file.
-  the 'ic' in victory near the start of file 3 is stored as a single value 131, this is less than 256 so not a decompressor issue - file corrupt
-  */
+
   input_file.close();
   std::cout << "input file closed \n";
   output_file.close();
