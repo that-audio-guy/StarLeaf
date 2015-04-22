@@ -46,6 +46,6 @@ int main() {
     //LZWDecompress.streamPacket(LZWFileStream.packet);
     LZWFileStream.savePacket();
   //}
-  
+
   std::cout << "program ended \n Check file for human readability \n Use different decompression option at runtime if output is garbage \n";
 }
